@@ -26,7 +26,7 @@ window.addEventListener("scroll", () => {
 
     const ypos = window.pageYOffset;
 
-    if (ypos > 100) {
+    if (ypos > 30) {
         top.classList.add("nav-colored");
         top.classList.add("drop-shadow");
         top.classList.remove("nav-transparent");

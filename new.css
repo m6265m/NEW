@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     color: black;
+    background-color: white;
 }
 
 html,
@@ -10,7 +11,6 @@ body {
     margin: 0;
     height: 100%;
     font-family: Montserrat, sans-serif !important;
-    background-color: #ffebee;
 }
 
 nav {
@@ -136,7 +136,6 @@ li a{
 
 #images {
     padding-left: 12vw;
-    background-color: whitesmoke;
     padding-right: 4vw;
 }
 
@@ -165,12 +164,13 @@ a {
 
 #abaya-image{
     display: grid;
-    grid-template-rows: 220px 1fr ;
+    grid-template-rows: 350px 1fr ;
 }
 
 #abaya-image img{
     width: 100%;
-    height: auto;
+    height: 100%;
+    display: block;
 
 }
 
