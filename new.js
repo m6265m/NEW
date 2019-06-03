@@ -20,9 +20,7 @@ hamburger.addEventListener("click", () => {
 });
 
 window.addEventListener("scroll", () => {
-    const top = document.getElementById("move");
-
-
+    const top = document.getElementById("empty");
 
     const ypos = window.pageYOffset;
 
@@ -37,5 +35,6 @@ window.addEventListener("scroll", () => {
         top.classList.remove("drop-shadow");
     }
 });
+
 
 
