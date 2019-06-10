@@ -3,124 +3,110 @@
     padding: 0;
     box-sizing: border-box;
     color: black;
-    /*background-color: white;*/
 }
 
-html,
-body {
-    margin: 0;
+body{
     height: 100%;
     font-family: Montserrat, sans-serif !important;
+    width: 100vw;
     overflow-x: hidden;
+    padding: 0;
+    margin: 0;
+    /* background: linear-gradient(to bottom, #3524a0, #6b2da0); */
 }
+
 
 /*                     NAV            (masla over here)      */
 
-#empty{
+#navbar{
     display: grid;
-    grid-template-columns: repeat(2,1fr) ;
-    background-color:red;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas:    'logo c1'
+                            'c2 c2';
+    width: 100%;
+    position: fixed;
+    box-sizing: border-box;
+    /* background-color: #e2e2e2; */
+    transition: 0.5s;
 }
+    #navbar.black{
+        background-color: white;
+        /* padding: 1em; */
+    }
+    #navbar.black #logodiv img{
+        height: 5vw;
+    }
+    #navbar.black #menu ul li a{
+        font-size: 16px;
+        color: black;
+    }
+    #navbar.black .fa-bars{
+        color: black;
+    }
 
-.yo{
-    /* position: sticky;           */
+    .nav-colored{
+        background-color: white;
+        transition: background-color 1s linear;
+    }
+    
+    .nav-transparent{
+        background-color: transparent;
+        transition: background-color 1s linear;
+    }
+
+    .drop-shadow{
+        -webkit-box-shadow: 0px 1px 21px 2px rgba(194,179,194,1);
+        -moz-box-shadow: 0px 1px 21px 2px rgba(194,179,194,1);
+        box-shadow: 0px 1px 21px 2px rgba(194,179,194,1);
+    }
+#logodiv{
+    display: grid;
+    place-content: center left;
 }
+    #logodiv img{
+        height: 7vw;
+        padding: 0 0 0 2em;
+        transition: 0.5s;
+    }
+#menu{
+    display: grid;
+    place-content: center right;
+}
+    #menu ul{
+        display: flex;
+        padding: 0 2em 0 0;
+        margin: 0;
+    }
+        #menu ul li{
+            list-style: none;
+            padding: 0 1em;
+        }
+            #menu ul li a{
+                margin: 0;
+                font-family: Arial;
+                text-decoration: none;
+                color: black;
+                font-size: 20px;
+                transition: 0.5s;
+            }
+#hamburger{
+    display: none;
 
+}
 
 .fa-user{
-    font-size: 19px;
+    font-size: 20px;
     cursor: pointer;
-}
-
-.signin{
-    float: right;
-    background-color: #EDC9AF;
-    min-width: 158px;
-    /*display: none;*/
-    z-index: 1;
-}
-
-.signin a{
-    text-decoration: none;
-    color: black;
-    padding: 12px 16px;
-    display: block;
     text-align: center;
+    transition: 0.5s;
 }
 
-.signin a:hover{
-    background-color: #000;
-    color: white;
-    transition: background-color 1s;
-}
-
-.fa-user:hover .signin a{
-    display: block;
-}
-/*i.fa-user::after{
-    content: 'SIGN IN';
-    background-color: hotpink;
-    padding: 2em;
-    position: relative;
-    top: 60%;
-}*/
-
-
-.nav-colored{
-    background-color: white;
-    transition: background-color 1s linear;
-}
-
-.nav-transparent{
-    background-color: transparent;
-    transition: background-color 1s linear;
-}
-
-/* CHANGED */
-.drop-shadow{
-    -webkit-box-shadow: 0px 1px 21px 2px rgba(194,179,194,1);
-    -moz-box-shadow: 0px 1px 21px 2px rgba(194,179,194,1);
-    box-shadow: 0px 1px 21px 2px rgba(194,179,194,1);
-}
-
-/* and masla over here too */
-.logo{
-    align-content: center;
-    padding: 0;
-    background-color: #EDC9AF
-}
-.logo img{
-    width: 251px;
-    height: 10vh;
-    padding: 0;
-}
-div .logo{
-    width: fit-content;
-}
-
-#nav{
-    /* padding: 0 2em 0 0; */
-}
-
-.nav-links {
-    list-style: none;
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    padding: 1.5em 0em 0em 2em;
-    justify-content: end;
-
-}
-
-.nav-links li a {
-    color: black;
-    text-decoration: none;
+#navbar.black .fa-user{
     font-size: 16px;
 }
 
-.nav-links li{
-    width: max-content;
-    padding: 0 0 0 2em;
-}
+
 
 .cool-link::after{
     content:'';
@@ -137,6 +123,45 @@ div .logo{
 
 }
 
+/*      DROPDOWN     */
+
+.sign-in{
+    float: right;
+    background-color: #EDC9AF;
+    min-width: 158px;
+    /* z-index: 1; */
+    margin-top: 90px;
+    transition: 0.5s;
+    /*visibility: hidden;*/
+    
+}
+
+.sign-in a{
+    text-decoration: none;
+    color: black;
+    padding: 12px 16px;
+    display: block;
+    text-align: center;
+}
+
+
+.sign-in li{
+    list-style: none;
+}
+
+.sign-in a:hover{
+    background-color: #000;
+    color: white;
+    transition: background-color 1s;
+} 
+
+.fa-user:hover  {
+    color: aliceblue;
+}
+
+.fa-user:hover .sign-in a {
+    visibility: visible
+}
 
 
 /*           CATEGORY DIV                  */
@@ -145,7 +170,7 @@ div .logo{
     /* background-color: brown; */
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    padding: 3em 0em 1em 7em;
+    padding: 0em 0em 1em 7em;
     text-align: center;
     /*border-bottom: 2px solid black;*/
     width: 90vw;
@@ -259,6 +284,40 @@ li a{
     display: inline-block;
 }
 
+.sign-in{
+    float: right;
+    background-color: #EDC9AF;
+    min-width: 158px;
+    margin-top: 90px;
+    transition: 0.5s;
+    visibility: hidden;
+    /*position: sticky;*/
+}
+
+.sign-in a{
+    text-decoration: none;
+    color: black;
+    padding: 12px 16px;
+    display: block;
+    text-align: center;
+
+}
+
+
+.sign-in li{
+    list-style: none;
+}
+
+.sign-in a:hover{
+    background-color: #000;
+    color: white;
+    transition: background-color 1s;
+}
+
+.fa-user:hover  {
+    color: aliceblue;
+}
+
 
 
 
@@ -311,10 +370,6 @@ li a{
     background-color: #EDC9AF;
     text-align: center;
 }
-
-
-
-
 
 
     .fa-envelope{
