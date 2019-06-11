@@ -35,12 +35,13 @@
         transition: height 1s;
         grid-area: c2; 
         place-content: center center;
+        /*position: fixed;*/
         height: 100vh;
         background-color: bisque;
         clip-path: circle(100px at 90% -20%);
         -webkit-clip-path: circle(100px at 90% -20%);
         transition: all 1s ease-out;
-
+        width: 100vw;
     }
     
     #menu.open{
@@ -109,6 +110,15 @@
             margin: 0 2em 0 0;
             cursor: pointer;
     }
+    #pehla{
+        display: none;
+    }
+    #doosra{
+        display: block;
+    }
+    .sign-in{
+        display: none;
+    }
 
    
 
@@ -128,12 +138,7 @@
     #footer-container{
         grid-template-columns: 1fr;
     }
-    #pehla{
-        display: none;
-    }
-    #doosra{
-        display: unset;
-    }
+
 }
 
 
