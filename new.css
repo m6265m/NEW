@@ -81,16 +81,13 @@ body{
             list-style: none;
             padding: 0 1em;
         }
-            #menu ul li a{
+            #menu ul li a {
                 margin: 0;
                 font-family: Arial;
                 text-decoration: none;
                 color: black;
                 font-size: 20px;
                 transition: 0.5s;
-            }
-            #doosra{
-                display: none;
             }
 #hamburger{
     display: none;
@@ -165,6 +162,10 @@ body{
 
 .fa-user:hover  {
     color: aliceblue;
+}
+
+#doosra{
+    display: none;
 }
 
 
@@ -273,12 +274,6 @@ li{
     border-bottom: 2px solid black;
     width: 100%;
 }
-
-li a{
-    display: inline-block;
-}
-
-
 
 
 

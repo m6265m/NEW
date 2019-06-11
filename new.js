@@ -31,12 +31,14 @@ $(function() {
 var x = 0;
 
 
+
 const hamburger = document.getElementById("menuButton");
 const navLinks = document.getElementById("menu");
 const links = document.getElementById("menu li");
 
 hamburger.addEventListener("click", () => {
     navLinks.classList.toggle("open");
+
     links.forEach(link => {
         link.classList.toggle("fade");
     });

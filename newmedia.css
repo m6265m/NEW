@@ -13,6 +13,14 @@
 
 @media screen and (max-width: 768px) {
 
+    #doosra{
+        display: block;
+    }
+
+    .sign-in{
+        display: none;
+    }
+
     .fa-envelope, .fa-map-marker-alt, .fa-phone, .fa-globe {
         font-size: 10px;
     }
@@ -36,6 +44,7 @@
         grid-area: c2; 
         place-content: center center;
         height: 100vh;
+        width: 100vw;
         background-color: bisque;
         clip-path: circle(100px at 90% -20%);
         -webkit-clip-path: circle(100px at 90% -20%);
