@@ -121,12 +121,18 @@
 
     #abaya-image img{
         width: 100%;
-        height: 20vh;
+        height: auto;
         display: block;
     }
 
     #footer-container{
         grid-template-columns: 1fr;
+    }
+    #pehla{
+        display: none;
+    }
+    #doosra{
+        display: unset;
     }
 }
 

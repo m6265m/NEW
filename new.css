@@ -20,14 +20,13 @@ body{
 
 #navbar{
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(2, auto);
-    grid-template-areas:    'logo c1'
-                            'c2 c2';
+    grid-template-areas:    'logo logo logo c1 c1 c1'
+                            'c2 c2 c2 c2 c2 c3';
     width: 100%;
     position: fixed;
     box-sizing: border-box;
-    /* background-color: #e2e2e2; */
     transition: 0.5s;
 }
     #navbar.black{
@@ -44,7 +43,6 @@ body{
     #navbar.black .fa-bars{
         color: black;
     }
-
     .nav-colored{
         background-color: white;
         transition: background-color 1s linear;
@@ -54,7 +52,6 @@ body{
         background-color: transparent;
         transition: background-color 1s linear;
     }
-
     .drop-shadow{
         -webkit-box-shadow: 0px 1px 21px 2px rgba(194,179,194,1);
         -moz-box-shadow: 0px 1px 21px 2px rgba(194,179,194,1);
@@ -62,6 +59,7 @@ body{
     }
 #logodiv{
     display: grid;
+    grid-area: logo;
     place-content: center left;
 }
     #logodiv img{
@@ -71,6 +69,7 @@ body{
     }
 #menu{
     display: grid;
+    grid-area: c1;
     place-content: center right;
 }
     #menu ul{
@@ -90,9 +89,11 @@ body{
                 font-size: 20px;
                 transition: 0.5s;
             }
+            #doosra{
+                display: none;
+            }
 #hamburger{
     display: none;
-
 }
 
 .fa-user{
@@ -105,8 +106,6 @@ body{
 #navbar.black .fa-user{
     font-size: 16px;
 }
-
-
 
 .cool-link::after{
     content:'';
@@ -124,46 +123,54 @@ body{
 }
 
 /*      DROPDOWN     */
-
 .sign-in{
-    float: right;
     background-color: #EDC9AF;
-    min-width: 158px;
-    /* z-index: 1; */
-    margin-top: 90px;
     transition: 0.5s;
-    /*visibility: hidden;*/
-    
-}
+    visibility: hidden;
+    position: fixed;
+    right: 0%;
+    top: 7vw;
 
+    /*position: sticky;*/
+}
+.sign-in.scrolling{
+    top:5vw;
+}
 .sign-in a{
     text-decoration: none;
     color: black;
     padding: 12px 16px;
     display: block;
     text-align: center;
+    /*width: fit-content;*/
+
 }
 
-
+.sign-in ul{
+    padding: 0;
+    margin: 0;
+    width: max-content;
+}
 .sign-in li{
     list-style: none;
+    /*width: fit-content;*/
+
 }
 
 .sign-in a:hover{
     background-color: #000;
     color: white;
     transition: background-color 1s;
-} 
+}
 
 .fa-user:hover  {
     color: aliceblue;
 }
 
-.fa-user:hover .sign-in a {
-    visibility: visible
+
+#main-content{
+    padding-top: 7vw;
 }
-
-
 /*           CATEGORY DIV                  */
 
 #cat {
@@ -187,7 +194,6 @@ li{
     list-style: none;
 }
 
-
 #line {
     background-color: black;
     width: 80vw;
@@ -197,7 +203,6 @@ li{
 
 /*                 IMAGES DIV               */
 
-
 #ima {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -206,16 +211,11 @@ li{
     /*border: 2px solid green;*/
 }
 
-
 #ima p{
     /*background-color: deeppink;*/
     text-align: center;
     font-size: 19px;
 }
-
-
-
-
 
 #images {
     /*background-color: whitesmoke;*/
@@ -223,10 +223,6 @@ li{
     padding: 0 10em;
     width: 100vw;
 }
-
-
-
-
 
 #ima li{
     display: grid;
@@ -278,45 +274,10 @@ li{
     width: 100%;
 }
 
-
-
 li a{
     display: inline-block;
 }
 
-.sign-in{
-    float: right;
-    background-color: #EDC9AF;
-    min-width: 158px;
-    margin-top: 90px;
-    transition: 0.5s;
-    visibility: hidden;
-    /*position: sticky;*/
-}
-
-.sign-in a{
-    text-decoration: none;
-    color: black;
-    padding: 12px 16px;
-    display: block;
-    text-align: center;
-
-}
-
-
-.sign-in li{
-    list-style: none;
-}
-
-.sign-in a:hover{
-    background-color: #000;
-    color: white;
-    transition: background-color 1s;
-}
-
-.fa-user:hover  {
-    color: aliceblue;
-}
 
 
 
@@ -325,7 +286,7 @@ li a{
 /*         the image at the end           */
 #abaya-image{
     display: grid;
-    grid-template-rows: 350px 1fr ;
+    grid-template-rows: auto ;
     padding: 1em 0;
 }
 

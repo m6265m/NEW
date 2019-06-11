@@ -2,10 +2,12 @@ $(window).on('scroll', function () {
     if($(window).scrollTop()){
         $('#navbar').addClass('black')
         $('#navbar').addClass('drop-shadow')
+        $('.sign-in').addClass('scrolling')
     }
     else{
         $('#navbar').removeClass('black')
         $('#navbar').removeClass('drop-shadow')
+        $('.sign-in').removeClass('scrolling')
     }
 })
 
