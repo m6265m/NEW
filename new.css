@@ -16,7 +16,7 @@ body{
 }
 
 
-/*                     NAV            (masla over here)      */
+/*                     NAV                 */
 
 #navbar{
     display: grid;
@@ -72,16 +72,19 @@ body{
     grid-area: c1;
     place-content: center right;
 }
-    #menu ul{
+
+#menu ul{
         display: flex;
         padding: 0 2em 0 0;
         margin: 0;
     }
-        #menu ul li{
+
+#menu ul li{
             list-style: none;
             padding: 0 1em;
         }
-            #menu ul li a {
+
+#menu ul li a {
                 margin: 0;
                 font-family: Arial;
                 text-decoration: none;
@@ -89,6 +92,11 @@ body{
                 font-size: 20px;
                 transition: 0.5s;
             }
+
+#menu li {
+    width: max-content;
+
+}
 #hamburger{
     display: none;
 }
@@ -119,6 +127,10 @@ body{
 
 }
 
+li a{
+    display: inline-block;
+}
+
 /*      DROPDOWN     */
 .sign-in{
     background-color: #EDC9AF;
@@ -127,7 +139,6 @@ body{
     position: fixed;
     right: 0%;
     top: 7vw;
-
     /*position: sticky;*/
 }
 .sign-in.scrolling{
@@ -160,9 +171,6 @@ body{
     transition: background-color 1s;
 }
 
-.fa-user:hover  {
-    color: aliceblue;
-}
 
 #doosra{
     display: none;
@@ -170,7 +178,7 @@ body{
 
 
 #main-content{
-    padding-top: 7vw;
+    padding-top: 9vw;
 }
 /*           CATEGORY DIV                  */
 
@@ -190,6 +198,7 @@ body{
     text-decoration: none;
     font-size: 16px;
 }
+
 
 li{
     list-style: none;
@@ -231,8 +240,8 @@ li{
 }
 
 #ima li img {
-    width: 100%;
-    height: auto;
+    width: 95%;
+    height: 95%;
     place-self: center;
     /*border: 2px solid darkred;*/
 
@@ -274,6 +283,27 @@ li{
     border-bottom: 2px solid black;
     width: 100%;
 }
+
+
+
+.cool-link-left::after{
+    content: '';
+    bottom: 0%;
+    left: 0%;
+    top: 100%;
+    border-left: 2px solid black;
+    transition: 0.3s;
+    /*display: inline-flex;*/
+    /*width: 0;*/
+    position: absolute;
+
+}
+
+.cool-link-left:hover::after{
+    top: 0;
+    /*width: 100%;*/
+}
+
 
 
 
