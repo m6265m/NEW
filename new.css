@@ -28,6 +28,7 @@ body{
     position: fixed;
     box-sizing: border-box;
     transition: 0.5s;
+    z-index: 11;
 }
     #navbar.black{
         background-color: white;
@@ -219,6 +220,7 @@ li{
     grid-gap: 5px;
     padding: 1em 0;
     /*border: 2px solid green;*/
+    /*overflow: hidden;*/
 }
 
 #ima p{
@@ -228,24 +230,25 @@ li{
 }
 
 #images {
-    /*background-color: whitesmoke;*/
+    background-color: whitesmoke;
     /*border: 2px solid orange;*/
     padding: 0 10em;
     width: 100vw;
+    /*overflow: hidden;*/
 }
 
 #ima li{
     display: grid;
     /*border: 2px solid #3b5998;*/
+    /*overflow: hidden;*/
 }
 
 #ima li img {
-    width: 95%;
+    width: 100%;
     height: 95%;
     place-self: center;
     /*border: 2px solid darkred;*/
-
-
+    /*overflow: hidden;*/
 
 }
 #ima a{
@@ -255,7 +258,49 @@ li{
     width: 80%;
 }
 
+#images #ima li{
+    overflow: hidden;
+}
+
 /*         HOVER EFFECT FOR IMAGES     */
+
+ #ima li img{
+    transition: transform 2s;
+}
+
+ #ima li:hover img{
+    transform: scale(1.2);
+     background:rgba(0,0,0,0.8) ;
+}
+
+ #details{
+     position: relative;
+     /*left: 6em;*/
+     place-self: center;
+     background:rgba(0,0,0,0.5) ;
+    bottom: 211px;
+    /*visibility: hidden;*/
+    /*opacity: 0;*/
+    width: 50%;
+     height: 100%;
+    transform: scaleY(0);
+    transition: transform 0.5s;
+
+}
+ #details p{
+     color: burlywood;
+
+ }
+
+#ima li:hover #details{
+    /*visibility: visible;*/
+    transform: scaleY(1);
+    /*opacity: 1;*/
+}
+
+
+
+/*
 
 .cool-link1::after{
     content:'';
@@ -293,18 +338,16 @@ li{
     top: 100%;
     border-left: 2px solid black;
     transition: 0.3s;
-    /*display: inline-flex;*/
-    /*width: 0;*/
     position: absolute;
 
 }
 
 .cool-link-left:hover::after{
     top: 0;
-    /*width: 100%;*/
+
 }
 
-
+*/
 
 
 
