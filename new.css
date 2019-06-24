@@ -31,7 +31,7 @@ body{
     z-index: 11;
 }
     #navbar.black{
-        background-color: white;
+        background-color: black;
         /* padding: 1em; */
     }
     #navbar.black #logodiv img{
@@ -39,13 +39,13 @@ body{
     }
     #navbar.black #menu ul li a{
         font-size: 16px;
-        color: black;
+        color: bisque;
     }
     #navbar.black .fa-bars{
-        color: black;
+        color: bisque;
     }
     .nav-colored{
-        background-color: white;
+        background-color: black;
         transition: background-color 1s linear;
     }
     
@@ -111,6 +111,7 @@ body{
 
 #navbar.black .fa-user{
     font-size: 16px;
+    color: bisque;
 }
 
 .cool-link::after{
@@ -184,7 +185,7 @@ li a{
 /*           CATEGORY DIV                  */
 
 #cat {
-    /* background-color: brown; */
+     /*background-color: brown;*/
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     padding: 0em 0em 1em 7em;
@@ -217,10 +218,11 @@ li{
 #ima {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 5px;
+    grid-gap: 22px;
     padding: 1em 0;
     /*border: 2px solid green;*/
     /*overflow: hidden;*/
+    /*background-color: pink;*/
 }
 
 #ima p{
@@ -250,6 +252,7 @@ li{
     /*border: 2px solid darkred;*/
     /*overflow: hidden;*/
 
+
 }
 #ima a{
     /*border: 2px solid black;*/
@@ -270,32 +273,29 @@ li{
 
  #ima li:hover img{
     transform: scale(1.2);
-     background:rgba(0,0,0,0.8) ;
 }
 
  #details{
+     font-family: 'Open Sans Condensed', sans-serif;
      position: relative;
-     /*left: 6em;*/
      place-self: center;
-     background:rgba(0,0,0,0.5) ;
-    bottom: 211px;
-    /*visibility: hidden;*/
-    /*opacity: 0;*/
-    width: 50%;
-     height: 100%;
+     background:black ;
+    width: 96%;
+     height: auto;
     transform: scaleY(0);
     transition: transform 0.5s;
+     /*top: 10px;*/
+     bottom: 211px;
+
 
 }
  #details p{
      color: burlywood;
-
+     font-size: 30px;
  }
 
 #ima li:hover #details{
-    /*visibility: visible;*/
     transform: scaleY(1);
-    /*opacity: 1;*/
 }
 
 

@@ -38,16 +38,24 @@
         font-size: 30px;
     }
 
+    #navbar{
+        height: 6vh;
+    }
+
     #navbar.black{
-        background-color: transparent;
+        background-color: black;
         /* padding: 1em; */
+    }
+
+    #navbar.black #menu ul li a{
+        color: black;
     }
 
     #menu{
         /* display: none; */
         transition: height 1s;
         grid-area: c2; 
-        place-content: center center;
+        place-content:  center;
         /*position: fixed;*/
         height: 100vh;
         width: 100vw;
@@ -124,6 +132,10 @@
             margin: 0 2em 0 0;
             cursor: pointer;
     }
+
+    #details{
+        bottom: 143px;
+    }
 }
 
 
@@ -141,6 +153,10 @@
 
     #footer-container{
         grid-template-columns: 1fr;
+    }
+
+    #details{
+        bottom: 143px;
     }
 
 }
