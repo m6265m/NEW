@@ -187,7 +187,7 @@ li a{
 #cat {
      /*background-color: brown;*/
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     padding: 0em 0em 1em 7em;
     text-align: center;
     /*border-bottom: 2px solid black;*/
@@ -219,7 +219,7 @@ li{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 22px;
-    padding: 1em 0;
+    padding: 2em 0;
     /*border: 2px solid green;*/
     /*overflow: hidden;*/
     /*background-color: pink;*/
@@ -236,7 +236,18 @@ li{
     /*border: 2px solid orange;*/
     padding: 0 10em;
     width: 100vw;
-    /*overflow: hidden;*/
+    padding-top: 2em;
+}
+
+#images h3{
+    font-family: Montserrat, sans-serif;
+    font-weight: 500;
+    font-size: 20px ;
+    font-style: normal;
+    color: rgb(28, 27, 27);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    text-align: center;
 }
 
 #ima li{
