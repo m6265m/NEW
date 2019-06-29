@@ -5,6 +5,19 @@
     #ima {
         grid-template-columns: 1fr 1fr;
     }
+
+    #cat{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-areas: "a a a a"
+        "b b b b";
+        grid-template-rows: auto;
+    }
+
+
+    #cat #custom{
+        grid-area: b;
+        padding-top: 1em;
+    }
 }
 
 
@@ -145,6 +158,14 @@
         padding: 3em 0em 1em 3em;
     }
 
+    #cat li a{
+        font-size: 14px;
+        letter-spacing: 0.5px;
+
+    }
+
+
+
     #abaya-image img{
         width: 100%;
         height: auto;
@@ -166,8 +187,23 @@
 /*             IMAGES WALI MEDIA            */
 
 @media screen and (max-width: 640px) {
+
+    #images{
+        padding: 0 3em;
+    }
+
     #ima {
         grid-template-columns: 1fr;
     }
 
+    #details{
+        bottom: 250px;
+    }
+
+}
+
+@media screen and (max-width: 360px){
+    #details{
+        bottom: 175px;
+    }
 }

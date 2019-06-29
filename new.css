@@ -187,7 +187,7 @@ li a{
 #cat {
      /*background-color: brown;*/
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     padding: 0em 0em 1em 7em;
     text-align: center;
     /*border-bottom: 2px solid black;*/
@@ -310,7 +310,7 @@ li{
  #details p{
      color: burlywood;
      font-size: 30px;
-     
+
  }
 
 #ima li:hover #details{
